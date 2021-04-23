@@ -2,6 +2,8 @@ package com.dao.student;
 
 import com.entity.student.Student;
 
+import java.util.List;
+
 /**
  * @Author: Liulq
  * @Description:
@@ -16,4 +18,8 @@ public interface studentDao {
 
     //查找该学生验证存在否
     boolean searchStudent(Student student);
+
+    boolean deleteStudent(int ID);
+
+    boolean updateStudent(Student student);
 }

@@ -18,16 +18,12 @@
     <title>表单页</title>
 </head>
 <body>
-<%
-    List<Student> list = new ArrayList<>();
-    list = studentDaoImpl.findAll();
-%>
+
 <div style="margin-top: 180px;" align="center">
     <table border="1px solid">
         <tr bgcolor="#a9a9a9">
             <th>编号</th><th>姓名</th><th>年龄</th><th>性别</th><th>操作1</th><th>操作2</th>
         </tr>
-        <c:forEach items="<%=list%>" var="person" varStatus="status">
             <tr>
                 <td>${status.index+1}</td>
                 <td>
