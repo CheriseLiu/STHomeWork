@@ -41,7 +41,7 @@
   </head>
   <body>
   <div class="main">
-    <p1>学生信息采集系统</p1>
+    <p1>学生信息管理系统</p1>
     <br><br><br>
     <p2>登录页面</p2>
     <div class="login">

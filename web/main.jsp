@@ -1,6 +1,7 @@
 <%@page import="java.util.List" %>
-<%@page import="com.entity.person.Person" %>
+<%@page import="com.entity.student.Student" %>
 <%@page import="java.util.ArrayList" %>
+<%@ page import="com.dao.student.impl.studentDaoImpl" %>
 <%--
   Created by IntelliJ IDEA.
   User: 11250
@@ -10,16 +11,16 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
-<jsp:useBean id="personDaoImpl" scope="page" class="com.dao.person.impl.PersonDaoImpl"/>
-<jsp:useBean id="person" scope="page" class="com.entity.person.Person"/>
+<jsp:useBean id="personDaoImpl" scope="page" class="com.dao.student.impl.studentDaoImpl"/>
+<jsp:useBean id="person" scope="page" class="com.entity.student.Student"/>
 <html>
 <head>
     <title>表单页</title>
 </head>
 <body>
 <%
-    List<Person> list = new ArrayList<>();
-    list = personDaoImpl.findAll();
+    List<Student> list = new ArrayList<>();
+    list = studentDaoImpl.findAll();
 %>
 <div style="margin-top: 180px;" align="center">
     <table border="1px solid">

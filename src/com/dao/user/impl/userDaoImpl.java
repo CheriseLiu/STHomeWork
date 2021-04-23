@@ -1,8 +1,8 @@
-package com.dao.student.impl;
+package com.dao.user.impl;
 
-import com.dao.student.StudentDao;
-import com.entity.student.Student;
-import com.sql.student.StudentSql;
+import com.dao.user.userDao;
+import com.entity.user.User;
+import com.sql.user.userSql;
 import com.util.dbconn.DbCoon;
 import com.util.dbconn.impl.DbCoonImpl;
 
@@ -13,29 +13,28 @@ import java.sql.ResultSet;
 /**
  * @Author: Liulq
  * @Description:
- * @Date: 23:27 2021/4/22
+ * @Date: 11:21 2021/4/23
  */
-public class StudentDaoImpl implements StudentDao {
+public class userDaoImpl implements userDao {
+
     private Connection conn;
 
     private DbCoon dbCoon;
 
-    public StudentDaoImpl(){
+    public userDaoImpl(){
         this.dbCoon = new DbCoonImpl();
     }
 
     @Override
-    public boolean addStudent(Student student) {
+    public boolean addUser(User user) {
         boolean flag = false;
         conn = null;
         PreparedStatement ps = null;
         try {
             this.conn = dbCoon.getConnection();
-            ps = conn.prepareStatement(StudentSql.addStudent);
-            ps.setInt(1,student.getID());
-            ps.setString(2,student.getName());
-            ps.setString(3,student.getBirDate());
-            ps.setString(4,student.getGender());
+            ps = conn.prepareStatement(userSql.addUser);
+            ps.setString(1,user.getUsername());
+            ps.setString(2,user.getPassword());
             if (ps.executeUpdate() > 0) {
                 flag = true;
             }
@@ -49,16 +48,16 @@ public class StudentDaoImpl implements StudentDao {
     }
 
     @Override
-    public boolean searchStudent(Student student) {
+    public boolean searchUser(User user) {
         boolean flag = false;
         conn = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
         try {
             this.conn = dbCoon.getConnection();
-            ps = conn.prepareStatement(StudentSql.searchStudent);
-            ps.setInt(1,student.getID());
-            ps.setString(2,student.getName());
+            ps = conn.prepareStatement(userSql.searchUser);
+            ps.setString(1,user.getUsername());
+            ps.setString(2,user.getPassword());
             rs = ps.executeQuery();
             if (rs != null){
                 System.out.println(flag + " flag in UserDaoImpl");

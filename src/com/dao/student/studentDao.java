@@ -10,10 +10,10 @@ import com.entity.student.Student;
 /**
  * 定义操作数据库的方法
  */
-public interface StudentDao {
-    //添加新用户
+public interface studentDao {
+    //添加新学生
     boolean addStudent(Student student);
 
-    //查找该用户验证存在否
+    //查找该学生验证存在否
     boolean searchStudent(Student student);
 }

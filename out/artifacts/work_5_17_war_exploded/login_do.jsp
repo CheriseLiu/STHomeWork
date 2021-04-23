@@ -9,7 +9,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<jsp:useBean id="userDaoImpl" scope="page" class="com.dao.user.impl.UserDaoImpl"/>
+<jsp:useBean id="userDaoImpl" scope="page" class="com.dao.user.impl.userDaoImpl"/>
 <jsp:useBean id="user" scope="page" class="com.entity.user.User"/>
 <html>
 <head>

@@ -1,13 +1,12 @@
 package com.dao.student.impl;
 
-import com.dao.student.StudentDao;
 import com.entity.student.Student;
 import org.junit.Test;
 
-public class StudentDaoImplTest {
+public class studentDaoImplTest {
 
-    StudentDao studentDao = new StudentDaoImpl();
-    StudentDaoImpl studentDaoImpl = new StudentDaoImpl();
+    com.dao.student.studentDao studentDao = new studentDaoImpl();
+    com.dao.student.impl.studentDaoImpl studentDaoImpl = new studentDaoImpl();
 
     @Test
     public void testAddStudent() {
