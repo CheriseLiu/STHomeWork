@@ -47,6 +47,8 @@ public class Student {
         return "Student{" +
                 "ID='" + ID + '\'' +
                 ", name='" + name + '\'' +
+                ",birDate='" + birDate + '\'' +
+                ",gender='" + gender +'\'' +
                 '}';
     }
 }

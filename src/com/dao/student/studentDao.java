@@ -16,10 +16,12 @@ public interface studentDao {
     //添加新学生
     boolean addStudent(Student student);
 
-    //查找该学生验证存在否
-    boolean searchStudent(Student student);
+    //查找该学生信息
+    String[][] searchStudent(String name);
 
-    boolean deleteStudent(int ID);
+    boolean deleteStudent(Student student);
 
     boolean updateStudent(Student student);
+
+    String[][] list(int pageNum);
 }

@@ -14,8 +14,8 @@
 <div>
     <form action="add_do.jsp" method="post">
         姓名：<input type="text" name="name">
-        年龄：<input type="text" name="age">
-        性别：<input type="text" name="sex">
+        出生日期：<input type="text" name="birDate">
+        性别：<input type="text" name="gender">
         <input type="submit" value="提交">
     </form>
 </div>

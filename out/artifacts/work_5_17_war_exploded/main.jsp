@@ -18,29 +18,30 @@
     <title>表单页</title>
 </head>
 <body>
-
 <div style="margin-top: 180px;" align="center">
     <table border="1px solid">
         <tr bgcolor="#a9a9a9">
-            <th>编号</th><th>姓名</th><th>年龄</th><th>性别</th><th>操作1</th><th>操作2</th>
+            <th>1</th>
+            <td><a href="add.jsp">插入</a> </td>
         </tr>
-            <tr>
-                <td>${status.index+1}</td>
-                <td>
-                        ${person.name}
-                </td>
-                <td>
-                        ${person.age}
-                </td>
-                <td>
-                        ${person.sex}
-                </td>
-                <td><a href="delete_do.jsp?id=${person.id}">删除</a> </td>
-                <td><a href="update.jsp?id=${person.id}">修改</a> </td>
-            </tr>
-        </c:forEach>
         <tr>
-            <td colspan="7" align="right"><a href="add.jsp">添加</a> </td>
+            <th>2</th>
+            <td><a href="">查找</a> </td>
+        </tr>
+        <tr>
+            <th>3</th>
+            <td><a href="delete_do.jsp">删除</a> </td>
+        </tr>
+        <tr>
+            <th>4</th>
+            <td><a href="update.jsp">修改</a> </td>
+        </tr>
+        <tr>
+            <th>5</th>
+        </tr>
+        <tr>
+            <th>6</th>
+            <td><a href="index.jsp">退出</a> </td>
         </tr>
     </table>
 </div>

@@ -26,7 +26,7 @@ public class userDaoImpl implements userDao {
     }
 
     @Override
-    public boolean addUser(User user) {
+    public boolean register(User user) {
         boolean flag = false;
         conn = null;
         PreparedStatement ps = null;

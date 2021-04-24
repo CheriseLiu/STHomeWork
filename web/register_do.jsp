@@ -9,8 +9,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<jsp:useBean id="userDaoImpl" scope="page" class="com.dao.student.impl.UserDaoImpl"/>
-<jsp:useBean id="user" scope="page" class="com.entity.student.User"/>
+<jsp:useBean id="userDaoImpl" scope="page" class="com.dao.user.impl.userDaoImpl"/>
+<jsp:useBean id="user" scope="page" class="com.entity.user.User"/>
 <html>
 <head>
     <title>注册处理</title>
@@ -23,7 +23,7 @@
     boolean flag;
     user.setUsername(n_username);
     user.setPassword(n_password);
-    flag = userDaoImpl.addUser(user);
+    flag = userDaoImpl.register(user);
     if (flag){
         System.out.println("恭喜您注册成功，请登录！");
         response.sendRedirect("index.jsp");

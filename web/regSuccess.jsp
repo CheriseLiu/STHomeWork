@@ -22,7 +22,7 @@
 <body>
 <div class="main">
     <p1 style="font-size: 30px">恭喜您注册成功!</p1>
-    <a href="index.jsp">前往注册</a>
+    <a href="index.jsp">前往登录</a>
 </div>
 </body>
 </html>

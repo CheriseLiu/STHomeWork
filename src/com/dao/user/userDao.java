@@ -9,7 +9,7 @@ import com.entity.user.User;
  */
 public interface userDao {
     //添加新用户
-    boolean addUser(User user);
+    boolean register(User user);
     //查找用户验证该用户存在否
     boolean searchUser(User user);
 }

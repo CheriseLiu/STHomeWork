@@ -10,8 +10,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<jsp:useBean id="personDaoImpl" scope="page" class="com.dao.person.impl.PersonDaoImpl"/>
-<jsp:useBean id="person" scope="page" class="com.entity.person.Person"/>
+<jsp:useBean id="studentDaoImpl" scope="page" class="com.dao.student.impl.studentDaoImpl"/>
+<jsp:useBean id="student" scope="page" class="com.entity.student.Student"/>
 <html>
 <head>
     <title>修改</title>

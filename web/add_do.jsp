@@ -6,8 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<jsp:useBean id="personDaoImpl" scope="page" class="com.dao.person.impl.PersonDaoImpl"/>
-<jsp:useBean id="person" scope="page" class="com.entity.person.Person"/>
+<jsp:useBean id="studentDaoImpl" scope="page" class="com.dao.student.impl.studentDaoImpl"/>
+<jsp:useBean id="student" scope="page" class="com.entity.student.Student"/>
 <html>
 <head>
     <title>添加处理</title>
@@ -16,18 +16,17 @@
 <%
     request.setCharacterEncoding("utf-8");
     String name = request.getParameter("name");
-    String age = request.getParameter("age");
-    Integer _age = Integer.parseInt(age);
-    String sex = request.getParameter("sex");
+    String birDate = request.getParameter("birDate");
+    String gender = request.getParameter("gender");
     boolean flag;
-    person.setName(name);
-    person.setAge(_age);
-    person.setSex(sex);
-    flag = personDaoImpl.addPerson(person);
+    student.setName(name);
+    student.setBirDate(birDate);
+    student.setGender(gender);
+    flag = studentDaoImpl.addStudent(student);
     if (flag){
-        response.sendRedirect("main.jsp");
+        response.sendRedirect("success.jsp");
     }else {
-        response.sendRedirect("error.jsp");
+        response.sendRedirect("fail.jsp");
     }
 %>
 </body>
